@@ -11,7 +11,7 @@ import { React } from "react";
 import { AiFillStar } from "react-icons/ai";
 import { useState } from "react";
 const colors = {
-  orange: "#FFA500",
+  yellow: "#FFDF00",
   grey: "#808080",
 };
 function Song(props) {
@@ -47,7 +47,7 @@ function Song(props) {
                 key={index}
                 color={
                   (hoverValue || currentValue) > index
-                    ? colors.orange
+                    ? colors.yellow
                     : colors.grey
                 }
                 onClick={() => handleClick(index + 1)}

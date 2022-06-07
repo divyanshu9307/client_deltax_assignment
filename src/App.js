@@ -22,10 +22,11 @@ const App = () => {
     
    <Switch>
       <Route exact path="/">
-        {/* <Header />
+        <Header />
+        <Topsongs/>
          <Header1/>
-        <Header2/> */}
-        {/* <Topsongs/> */}
+        {/* <Header2/>  */}
+      
         <Song
             Artwork={despacitoo}
             song="despacito"
