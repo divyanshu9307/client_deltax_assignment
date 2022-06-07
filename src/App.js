@@ -1,29 +1,31 @@
 
-import header from './components/header';
-import header1 from './components/header1';
-import header2 from './components/header2';
-import song from './components/song';
-import newsong from './subpages/newsong';
+import React from 'react'
+import Header from './components/Header';
+import Header1 from './components/Header1';
+import Header2 from './components/Header2';
+import Song from './components/Song';
+import Newsong from './subpages/Newsong';
 
 import './App.css';
-import {Switch,Route} from "react-router-dom" ;
 
-function App() {
+import {Switch,Route} from "react-router-dom" ;
+const App = () => {
   return (
-    <switch>
-      <Route exact  path="/">
-     <header/>
-    <header1/>
-    <header2/>
-    <song/>
-      </Route>
-      <Route exact path="newsong">
-        <newsong/>
-      </Route>
-     
-    </switch>
     
-  );
+   <Switch>
+      <Route exact path="/">
+        <Header />
+       
+    
+        </Route>
+        <Route exact path="/newsong">
+        <Header1/>
+    <Header2/>
+    <Song/> 
+        <Newsong/>
+        </Route>
+   </Switch>
+  )
 }
 
-export default App;
+export default App
