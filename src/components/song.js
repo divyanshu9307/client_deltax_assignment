@@ -1,12 +1,4 @@
-// import React from 'react'
 
-// const song = () => {
-//   return (
-//     <div>song</div>
-//   )
-// }
-
-// export default song
 import { React } from "react";
 import { AiFillStar } from "react-icons/ai";
 import { useState } from "react";
@@ -56,11 +48,6 @@ function Song(props) {
               />
             );
           })}
-          {/* <AiOutlineStar />
-          <AiOutlineStar />
-          <AiOutlineStar />
-          <AiOutlineStar />
-          <AiOutlineStar /> */}
         </div>
       </div>
     </div>

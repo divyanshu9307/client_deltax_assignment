@@ -5,7 +5,7 @@ const header2 = () => {
     <div className="heading-common">
         <div id="h2">Artists</div>
         <div id="h2">Date Of Birth</div>
-        <div id="h2">Song</div>
+        <div id="h2">Songs</div>
       </div>
   )
 }

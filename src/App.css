@@ -150,3 +150,23 @@ searchbox{
   border-left: 2px solid gray;
 
 }
+#artistset{
+  display: flex;
+  justify-content: space-around;
+  line-height: 80px;
+}
+#a1{
+  width: 450px;
+  text-align: center;
+  border-right: 2px solid gray;
+}
+#artistTop{
+  padding-left: 20px;
+  margin-top: 80px;
+  font-size: x-large;
+  border-bottom: 2px solid gray;
+}
+#artistdesign{
+  border: 2px solid gray;
+  margin: 0.5em 1em;
+}
