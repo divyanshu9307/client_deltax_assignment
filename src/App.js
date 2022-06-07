@@ -14,13 +14,13 @@ const App = () => {
     
    <Switch>
       <Route exact path="/">
-        <Header />
-       
-    
+        {/* <Header /> */}
+        <Header1/>
+        <Header2/>
         </Route>
         <Route exact path="/newsong">
-        <Header1/>
-    <Header2/>
+        
+   
     <Song/> 
         <Newsong/>
         </Route>
