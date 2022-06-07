@@ -1,11 +1,20 @@
-import logo from './logo.svg';
+
+import header from './components/header';
 import './App.css';
+import {Switch,Route} from "react-router-dom" ;
 
 function App() {
   return (
-    <div className="App">
-     <h1>Assignmnent</h1>
+    <switch>
+      <Route path="/">
+      <div className="App">
+     {/* <h1>Assignmnent</h1> */}
+     <header></header>
     </div>
+      </Route>
+     
+    </switch>
+    
   );
 }
 
