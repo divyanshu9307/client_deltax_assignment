@@ -89,3 +89,64 @@ searchbox{
   width: 150px;
   text-align: left;
 }
+#s1{
+  margin-top: 10px;
+  padding-left: 20px;
+  padding-top: 5px;
+  font-size: 1.5rem;
+  /* s1 */
+}
+#s2{
+  background-color: rgb(89, 97, 89);
+  /* padding-top: 10px; */
+  padding: 10px;
+  margin-right: 20px;
+  border-radius: 5px;
+  height: 20px;
+  font-weight: 600;
+  /* margin-top: 10px; */
+  font-size: large;
+
+}
+#s3{
+  color: white;
+  text-decoration: none;
+}
+#songs{
+  margin: 1.5em 0px;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  justify-items: center;
+  background-color: white;
+  border-bottom: 2px solid gray;
+}
+#songsname{
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  background-color: white;
+}
+#imgset{
+  margin-left: 40px;
+}
+.img12{
+  width: 80px;
+  height: 80px;
+}
+#song-set{
+  text-align: center;
+  padding-top: 25px;
+  border-left: 2px solid gray;
+  width: 200px;
+  
+}
+.starset{
+  width: 180px;
+  display: flex;
+  justify-content: space-around;
+  padding-top: 30px;
+  margin-right: 50px;
+  border-left: 2px solid gray;
+
+}
