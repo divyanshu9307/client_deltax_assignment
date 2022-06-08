@@ -22,16 +22,22 @@ const Newsong = () => {
     "Lord Huron",
   ]);
   const [data, setData] = useState({
-    songname: "",
+    song: "",
     datereleased: "",
     artwork: "",
+    nameartist:"",
+    dob:"",
+    bio:""
     
   });
   const [touched, setTouched] = useState({
     
-    songname: false,
-    datereleased: false,
+    song: false,
+    datee: false,
     artwork: false,
+    nameartist:false,
+    dob:false,
+    bio:false
     
   });
 
@@ -46,26 +52,46 @@ const Newsong = () => {
     setTouched({ ...touched, [blurredInput]: true });
   };
  
-  let songError = "";
-  let dateReleasedError = "";
-  let artworkError = "";
+  let songcheck = "";
+  let datecheck = "";
+  let artworkcheck = "";
+  let nameartistcheck="";
+  let dobcheck="";
+  let biocheck="";
   
-  if (!data.songname) {
-    songError = "*Name  is mandatory";
-  } else if (data.songname.length < 4) {
-    songError = "*enter full song name";
+  if (!data.song) {
+    songcheck = "*Name  is mandatory";
+  } else if (data.song.length < 4) {
+    songcheck = "*enter full song name";
   } else {
-    songError = "";
+    songcheck = "";
   }
-  if (!data.datereleased) {
-    dateReleasedError = "*Date is mandatory";
+  if (!data.datee) {
+    datecheck = "*Date is mandatory";
   } else {
-    dateReleasedError = "";
+    datecheck = "";
   }
   if (!data.artwork) {
-    artworkError = "*file is required";
+    artworkcheck = "*file is required";
   } else {
-    artworkError = "";
+    artworkcheck = "";
+  }
+  if (!data.nameartist) {
+    nameartistcheck = "* Artist Name  is mandatory";
+  } else if (data.nameartist.length < 4) {
+    nameartistcheck = "*enter full song name";
+  } else {
+    nameartistcheck = "";
+  }
+  if (!data.dob) {
+    dobcheck = "* Date of birth  is mandatory";
+  
+  } else {
+    dobcheck = "";
+  }
+  if (!data.bio) {
+    biocheck = "*Bio is mandatory";
+  
   }
   
 
@@ -94,27 +120,48 @@ const Newsong = () => {
                   <div className="input-div">
                     <div className="input">
                       <input
-                        name="artistname"
+                        name="nameartist"
                       
                         type="text"
-                    
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        value={data.nameartist}
                       />
+                      {touched.nameartist && (
+                        <div className="input errorMessage">{nameartistcheck}</div>
+                      )}
+                      
                      
                     </div>
                     <div className="input">
                       <input
                         type="date"
-                        name="date"
-                       
+                        name="dob"
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        value={data.dob}
                       />
+                      {touched.dob && (
+                        <div className="input errorMessage">{dobcheck}</div>
+                      )}
+                       
+                      
                     
                     </div>
                     <div className="input">
                       <textarea
                         type="text"
                         name="bio"
-                       
+                        value={data.bio}
+                        onChange={handleChange}
+                        onBlur={handleBlur}
+                        
                       ></textarea>
+                        {touched.bio && (
+                        <div className="input errorMessage">{biocheck}</div>
+                      )}
+                       
+                      
                      
                     </div>
                     <div className="input">
@@ -150,13 +197,13 @@ const Newsong = () => {
               <div className="input">
                 <input
                   type="text"
-                  name="songname"
+                  name="song"
                   onChange={handleChange}
                   onBlur={handleBlur}
-                  value={data.songname}
+                  value={data.song}
                 />
-                {touched.songname && (
-                  <div className="input errorMessage">{songError}</div>
+                {touched.song && (
+                  <div className="input errorMessage">{songcheck}</div>
                 )}
                   
               </div>
@@ -169,7 +216,7 @@ const Newsong = () => {
                   value={data.datereleased}
                 />
                 {touched.datereleased && (
-                  <div className="input errorMessage">{dateReleasedError}</div>
+                  <div className="input errorMessage">{datecheck}</div>
                 )}
                  
               </div>
@@ -182,7 +229,7 @@ const Newsong = () => {
                   value={data.artwork}
                 />
                 {touched.artwork && (
-                  <div className="input errorMessage">{artworkError}</div>
+                  <div className="input errorMessage">{artworkcheck}</div>
                 )}
                  
               </div>
