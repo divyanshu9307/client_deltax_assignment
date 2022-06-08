@@ -2,8 +2,15 @@
 import React, { useState, memo } from "react";
 import Multiselect from "multiselect-react-dropdown";
 
-const newsong = () => {
+const Newsong = () => {
  
+  const [artist] = useState([
+    "Shawn mendes",
+    "Post Malone",
+    "Alan Walker",
+    "Duncan Laurence",
+    "Lord Huron",
+  ]);
   
     return (
       <>
@@ -44,16 +51,16 @@ const newsong = () => {
                  />
               </div>
               <div className="input" id="add-artist">
-                <Multiselect
-                  isObject={false}
-                  onRemove={(event)=>{console.log(event)}}
-                  onSelect={(event)=>{console.log(event)}}
-                 
-                  showCheckbox
-                 
-                   name="artists"
-                  
-                />
+              <Multiselect
+                isObject={false}
+                onRemove={(event)=>{console.log(event)}}
+                onSelect={(event)=>{console.log(event)}}
+                options={artist}
+                showCheckbox
+                
+                 name="artists"
+                
+              />
                
   
                 <button  className="artist-button">
@@ -75,4 +82,4 @@ const newsong = () => {
   )
 }
 
-export default memo (newsong)
+export default memo (Newsong)
