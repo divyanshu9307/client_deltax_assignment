@@ -21,10 +21,11 @@ import Artistpage from './subpages/Artistpage';
 
 const App = () => {
   return (
-    
+    <>
+    <Header />
    <Switch>
       <Route exact path="/">
-        <Header />
+        
         <Topsongs/>
          <Header1/>
    
@@ -113,6 +114,7 @@ const App = () => {
         <Newsong/>
         </Route>
    </Switch>
+   </>
   )
 }
 
