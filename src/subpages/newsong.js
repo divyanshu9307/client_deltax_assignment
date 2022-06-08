@@ -21,6 +21,54 @@ const Newsong = () => {
     "Duncan Laurence",
     "Lord Huron",
   ]);
+  const [data, setData] = useState({
+    songname: "",
+    datereleased: "",
+    artwork: "",
+    
+  });
+  const [touched, setTouched] = useState({
+    
+    songname: false,
+    datereleased: false,
+    artwork: false,
+    
+  });
+
+ 
+
+  const handleChange = (event) => {
+    const changedInput = event.target.name;
+    setData({ ...data, [changedInput]: event.target.value });
+  };
+  const handleBlur = (event) => {
+    const blurredInput = event.target.name;
+    setTouched({ ...touched, [blurredInput]: true });
+  };
+ 
+  let songError = "";
+  let dateReleasedError = "";
+  let artworkError = "";
+  
+  if (!data.songname) {
+    songError = "*Name  is mandatory";
+  } else if (data.songname.length < 4) {
+    songError = "*enter full song name";
+  } else {
+    songError = "";
+  }
+  if (!data.datereleased) {
+    dateReleasedError = "*Date is mandatory";
+  } else {
+    dateReleasedError = "";
+  }
+  if (!data.artwork) {
+    artworkError = "*file is required";
+  } else {
+    artworkError = "";
+  }
+  
+
   
     return (
       <>
@@ -86,6 +134,7 @@ const Newsong = () => {
         
           onSubmit={(event) => {
             event.preventDefault();
+            console.log(data);
             
           }}
         >
@@ -95,26 +144,47 @@ const Newsong = () => {
               <div className="name">Song Name</div>
               <div className="name">Date Released</div>
               <div className="name">Artwork</div>
-              <div className="name">Artist</div>
+              <div className="name">Artists</div>
             </div>
             <div className="input-div">
               <div className="input">
                 <input
                   type="text"
                   name="songname"
-                  />
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={data.songname}
+                />
+                {touched.songname && (
+                  <div className="input errorMessage">{songError}</div>
+                )}
+                  
               </div>
               <div className="input">
                 <input
                   type="date"
                   name="datereleased"
-                 />
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={data.datereleased}
+                />
+                {touched.datereleased && (
+                  <div className="input errorMessage">{dateReleasedError}</div>
+                )}
+                 
               </div>
               <div className="input">
                 <input
                   type="file"
                   name="artwork"
-                 />
+                  onChange={handleChange}
+                  onBlur={handleBlur}
+                  value={data.artwork}
+                />
+                {touched.artwork && (
+                  <div className="input errorMessage">{artworkError}</div>
+                )}
+                 
               </div>
               <div className="input" id="add-artist">
               <Multiselect
