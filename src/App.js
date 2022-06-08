@@ -24,18 +24,18 @@ const App = () => {
     
    <Switch>
       <Route exact path="/">
-        {/* <Header />
+        <Header />
         <Topsongs/>
-         <Header1/> */}
-        {/* <Header2/>  */}
+         <Header1/>
+   
       
-        {/* <Song
+        <Song
             Artwork={despacitoo}
             song="despacito"
             dateOfRelease="july 10,2019"
             Artist="Luis Fonsi"
-          /> */}
-           {/* <Song
+          />
+           <Song
             Artwork={senoritaa}
             song="senorita"
             dateOfRelease="august 28,2018"
@@ -64,7 +64,7 @@ const App = () => {
             song="senorita"
             dateOfRelease="may 25,2018"
             Artist="Lord Huron"
-          /> */}
+          />
           <ArtistTopPage />
         <div id="artistdesign">
         <Header2/> 
@@ -88,8 +88,24 @@ const App = () => {
             dob="9 December 1965"
             songslist="Arcade"
           />
+           <Artistpage
+            name="Lord Huron"
+            dob="14 June 1987"
+            songslist="night we met"
+          />
+          <Artistpage
+            name="Alan Walker"
+            dob="19 july 1990"
+            songslist="On My Way"
+          />
+          <Artistpage
+            name="Duncan Laurence"
+            dob="9 December 1965"
+            songslist="Arcade"
+          />
         </div>
         </Route>
+        <Newsong/>
         <Route exact path="/newsong">
         
    

@@ -170,3 +170,38 @@ searchbox{
   border: 2px solid gray;
   margin: 0.5em 1em;
 }
+.form-design{
+  margin: auto;
+  margin-top: 80px;
+  width: 50%;
+  border: 2px solid black;
+  justify-content: center;
+}
+.input-design{
+  display: flex;
+  flex-direction: row;
+}  
+.name{
+  padding : 12px;
+  width: 200px;
+   }
+   .input-button
+   {
+     
+     display: flex;
+     
+   }
+   .cancel-button{
+     
+     padding:0 4px ;
+     border:1px solid #767676;
+     border-radius: 2px;
+     margin-left: 3px;
+     width: auto;
+     color: black;
+     text-decoration: none;
+     background-color: #E5E5E5;
+   }
+   .artist-button{
+    width: 90px;
+  }
